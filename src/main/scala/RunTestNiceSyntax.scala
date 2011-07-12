@@ -20,7 +20,9 @@ object RunTestNiceSyntax {
 
     val path = "sounds/a11wlk01.wav"
 
+    println("sending synthdef")
     val df = DataFlowSynthDef.load("play",s)({ Out.ar(0, PlayBuf.ar(1,"buf".kr)) })
+    println("start loading file "+path)
     val buf = DataFlowBuffer.readChannel(s, path, channels = Seq(0))
     val synth = Promise[Synth]()
 
@@ -29,9 +31,6 @@ object RunTestNiceSyntax {
       println("playing buf "+buf())
       synth << makeSynth(df(), buf().id.toDouble)
     }
-
-    println("sending synthdef")
-    println("start loading file "+path)
 
   }
 
