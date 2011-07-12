@@ -13,7 +13,7 @@ so If a task takes longer than that ammount of time the variables that depend on
     $ sbt                        # downloads and compiles spde-sbt plugin, enters sbt console
     > update                     # downloads Spde and Processing dependencies
     > run DataFlowTest           # compile, start sc server and run example
-    > run DataFlowTestExternal   # compile, connect to an sc server allready running and run example
+    > run DataFlowTestExternal   # compile, connect to an sc server allready running and run example. Doesn't seem to work at the momement...
     
 [1]:https://github.com/Sciss/ScalaCollider
 [2]:http://akka.io/docs/akka/1.1.3/intro/getting-started-first-scala.html
